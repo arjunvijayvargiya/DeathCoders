@@ -1,0 +1,137 @@
+In the outpatient department of an hospital, where there is a single doctor for consultation, patients are issued tokens in increasing order of their arrival. The token also carries a number indicating the severity of the case of a patient. For example, if a patient with a cold and cough comes at 9.55AM, he gets a token number 10 and priority number 3 whereas when a patient with a heart attack comes at 10 AM, he gets a token number 11 and priority number 1. The hospital staff routes the patient with highest priority number to the doctor’s queue using a procedure described below:
+
+1. There are 3 priority numbers depending on severity - 3 for casual cases, 2 for moderate cases and 1 for severe cases.
+2. For every 1 patient in casual queue, 2 patients from moderate queue and 3 from severe queue are sent to the doctor’s queue. Let C indicate casual queue, M the moderate queue and S the severe queue. If there are 9 patients in C, 10 in M and 9 in S, then the doctor’s queue would be: 3S-2M-1C-3S-2M-1C-3S-2M-1C-2M-1C-2M-5C
+
+Within the same queue, they can be sent in the order in which the input has been given. i.e, if token 10 and token 21 both have priority 3, then 10 will be sent first and 21 next. You do NOT have to sort based on token number for the same priority(The input will be provided in increasing order of token numbers).
+
+Using Queue ADT provided to you, you have to develop a program that takes as input, token numbers and corresponding priority number of a set of 10 patients and output the doctor’s queue based on the procedure described above. Your output has to list the token numbers as is in the doctor’s queue.
+
+INPUT:
+20 integers - the first integer would be token number, the second integer would be priority number, the third would again be token number and the fourth would be corresponding priority number and so on.
+
+OUTPUT:
+List of token numbers as would be in the final doctor’s queue each separated by a single space. The last token number should also be followed by a space (so as not to have a separate “cout” for the last entry).
+
+Sample Test Cases
+Input	Output
+Test Case 1	
+10 3
+12 2
+13 1
+14 2
+15 2
+16 1
+17 3
+18 2
+19 3
+20 1
+13 16 20 12 14 10 15 18 17 19 
+Test Case 2	
+101 1
+106 2
+107 3
+108 1
+109 2
+110 3
+111 1
+112 2
+113 3
+114 1
+101 108 111 106 109 107 114 112 110 113 
+Test Case 3	
+200 3
+201 3
+202 3
+203 3
+204 3
+205 3
+206 2
+207 2
+208 2
+209 2
+206 207 200 208 209 201 202 203 204 205 
+Test Case 4	
+1 3
+2 2
+3 1
+4 3
+5 2
+6 1
+7 3
+8 2
+9 1
+10 3
+3 6 9 2 5 1 8 4 7 10 
+Test Case 5	
+010 2
+011 2
+012 2
+013 2
+014 2
+015 3
+016 3
+017 3
+018 1
+019 1
+18 19 10 11 15 12 13 16 14 17 
+Test Case 6	
+11 1
+22 2
+34 3
+41 2
+52 2
+56 2
+87 3
+90 1
+92 2
+99 1
+11 90 99 22 41 34 52 56 87 92 
+Test Case 7	
+82 3
+83 3
+84 2
+85 2
+86 1
+87 1
+88 3
+89 2
+90 1
+91 2
+86 87 90 84 85 82 89 91 83 88 
+Test Case 8	
+33 3
+41 1
+52 2
+62 2
+70 1
+84 3
+88 3
+91 1
+92 1
+99 1
+41 70 91 52 62 33 92 99 84 88 
+Test Case 9	
+100 1
+200 3
+300 2
+400 2
+500 3
+600 1
+700 1
+800 2
+900 2
+1000 2
+100 600 700 300 400 200 800 900 500 1000 
+Test Case 10	
+12 1
+13 1
+14 1
+15 1
+16 1
+17 1
+18 1
+19 1
+20 1
+21 1
+12 13 14 15 16 17 18 19 20 21 
