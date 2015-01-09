@@ -1,0 +1,85 @@
+Primitive int data type handles integers each of which can be stored using 32 bits.
+Similarly long data type also has a limit. In this assignment you have to implement a
+data type which handles numbers larger than int , long and long long.
+
+You are given a number in decimal form. You need to build a data structure called
+BigInt which can store that data, and perform the following basic operations on that data type:
+
+   1.BigInt::add(BigInt A ), returns the result in another BigInt, without altering the numerical value of the caller.
+   2.BigInt::print(), this function must print Most significant digit at the beginning and must not print any leading zeroes.
+      Ex:     123 (correct )
+              0123 (incorrect)
+   3.populate(BigInt &A, char * str), populates the List in BigInt using public methods of BigInt.
+
+Note that populate(BigInt &A, char * str) method is not a function of BigInt.
+
+
+Input:
+Input will have two lines, each line contains a single BigInt.
+
+Sample Input:
+8132393963283
+216396739263921391
+
+Output:
+Output contains the result of the addition in a single line.
+Output of the above sample input is as follows.
+
+Sample Output:
+216404871657884674
+
+Constraints:
+1 ≤ Input length of BigInt ≤ 40 digits.
+Input for BigInt is always positive
+
+
+Hints: (optional)
+Store the numbers in reverse order, as addition is performed from Least Significant Digit. For example store the number 122 as 2->2->1, instead of 1->2->2.
+
+Note: To get the initial template code, delete everything in editor and submit.
+Sample Test Cases
+Input	Output
+Test Case 1	
+000
+0012
+12
+Test Case 2	
+028967392393932893286732367
+3916321936193212837293
+28971308715869086499569660
+Test Case 3	
+7638126218671819
+1562816296181
+7639689034968000
+Test Case 4	
+18256385218351252123297283
+1678532183521258285217
+18258063750534773381582500
+Test Case 5	
+01826382300038213232183261
+0023561800008163
+1826382300061775032191424
+Test Case 6	
+0000
+0000000000000000000000001
+1
+Test Case 7	
+85000000000000000000000000
+15000000000000000000000000
+100000000000000000000000000
+Test Case 8	
+1450000000000000907887
+0189093487289367482346283
+190543487289367483254170
+Test Case 9	
+0120000000000000000000000005
+5
+120000000000000000000000010
+Test Case 10	
+000008132393963283
+216396739263921391
+216404871657884674
+Test Case 11	
+9921963823826300219638238263002196382382
+9921963823826300219638238263002196382384
+19843927647652600439276476526004392764766
