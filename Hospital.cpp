@@ -1,6 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<process.h>
+/*
+
+  AUTHOR :Arjun Vijayvargiya
+  DESCRIPTION:Problem solved by the Author
+
+
+*/
 struct hos
 {
   	int tok;
